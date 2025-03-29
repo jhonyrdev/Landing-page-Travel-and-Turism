@@ -1,4 +1,25 @@
-/* General styles */
+:root {
+  --color-primary: #1e90ff; /* indigo-600 */
+  --color-primary-dark: #4682b4; /* indigo-500 */
+  --color-secondary: rgb(207, 158, 14); /* Secondary color for buttons */
+  --color-background: rgb(247, 247, 247);
+  
+  --color-text-primary: white;
+  --color-text-secondary: rgb(92, 92, 93);
+
+  --color-footer-background: rgb(2, 24, 41); 
+
+  --font-size-base: 1rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 3rem;
+  --font-size-xxl: 4rem;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  --border-radius: 10px;
+}
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -61,10 +82,10 @@ button {
 }
 
 .navbar-left {
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
   align-self: center;
-  font-weight: bold;
-  color: white;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
 }
 
 .navbar-links {
@@ -73,14 +94,14 @@ button {
 }
 
 .navbar-link {
-  color: white;
+  color: var(--color-text-primary);
   font-size: 1.2rem;
   align-self: center;
   transition: color 0.3s;
 }
 
 .navbar-link:hover {
-  color: #1e90ff;
+  color: var(--color-primary);
 }
 
 .navbar-mobile {
@@ -94,14 +115,8 @@ button {
 }
 
 .menu-icon{
-  color: white;
+  color: var(--color-text-primary);
 }
-
-/* Estilos para mostrar y ocultar el menú en dispositivos móviles */
-.navbar-links {
-  display: flex;
-}
-
 
 /* Hero Section */
 .hero {
@@ -125,12 +140,12 @@ button {
   width: 80%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: var(--color-text-primary);
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-semibold);
   margin-bottom: 1rem;
 }
 
@@ -140,21 +155,21 @@ button {
 }
 
 .btn-primary {
-  background-color: #1e90ff;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
   padding: 0.8rem 2rem;
   border-radius: 25px;
   transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #4682b4;
+  background-color: var(--color-primary-dark);
 }
 
 /* Services Section */
 .services {
   padding: 3rem 0;
-  background-color:rgb(247, 247, 247);
+  background-color: var(--color-background);
 }
 
 .section-container {
@@ -163,7 +178,7 @@ button {
 
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
   margin-bottom: 2rem;
 }
 
@@ -175,8 +190,8 @@ button {
 }
 
 .services-grid .service-card {
-  background-color:rgba(244, 244, 244, 0.98);
-  border-radius: 10px;
+  background-color: rgba(244, 244, 244, 0.98);
+  border-radius: var(--border-radius);
   padding: 2rem;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -197,9 +212,9 @@ button {
 .service-icon i {
   border-radius: 50%;
   padding: 1.5rem;
-  background-color:rgb(8, 108, 208);
+  background-color: rgb(8, 108, 208);
   font-size: 2rem;
-  color: white;
+  color: var(--color-text-primary);
 }
 
 .service-card h3 {
@@ -224,8 +239,8 @@ button {
 }
 
 .destinations-grid .destination-card {
-  background-color: white;
-  border-radius: 10px;
+  background-color: var(--color-text-primary);
+  border-radius: var(--border-radius);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
   width: 352px;
@@ -235,12 +250,12 @@ button {
   width: 100%;
   height: 230px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 
 .destination-content {
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .destination-content h3 {
@@ -267,7 +282,7 @@ button {
 /* Tours */
 .tours {
   padding: 3rem 0;
-  background-color:rgb(247, 247, 247);
+  background-color: var(--color-background);
 }
 
 .tours-grid {
@@ -277,8 +292,8 @@ button {
 }
 
 .tours-grid .tour-card {
-  background-color: white;
-  border-radius: 10px;
+  background-color: var(--color-text-primary);
+  border-radius: var(--border-radius);
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
@@ -291,12 +306,12 @@ button {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 
 .tour-content {
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .tour-content h3 {
@@ -323,8 +338,8 @@ button {
 /* Stats */
 .stats {
   padding: 3rem 0;
-  background-color:rgb(14, 120, 225);
-  color: white;
+  background-color: rgb(14, 120, 225);
+  color: var(--color-text-primary);
 }
 
 .stats-grid {
@@ -340,7 +355,7 @@ button {
 }
 
 .stat-card h3 {
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
   margin: 0 0 0.25rem 0;
 }
 
@@ -353,15 +368,15 @@ button {
   padding: 3rem 0;
 }
 
-.testimonials-grid {       
+.testimonials-grid {
   display: flex;
   gap: 2rem;
   justify-content: center;
 }
 
 .testimonials-grid .testimonial-card {
-  background-color: white;
-  border-radius: 10px;
+  background-color: var(--color-text-primary);
+  border-radius: var(--border-radius);
   padding: 1.5rem;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -388,21 +403,21 @@ button {
 }
 
 .testimonial-name {
-  font-weight: bold;
+  font-weight: var(--font-weight-semibold);
 }
 
 .testimonial-destination {
   font-size: 0.95rem;
-  color:rgb(136, 136, 136);
+  color: rgb(136, 136, 136);
 }
 
 .testimonial-quote {
   margin: 0 0 0.75rem 0;
-  color:rgb(92, 92, 93);
+  color: rgb(92, 92, 93);
 }
 
 .testimonial-stars i{
-  color:rgb(222, 167, 3);
+  color: rgb(222, 167, 3);
 }
 
 /* Newsletter */
@@ -434,16 +449,16 @@ button {
 
 .newsletter-content h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
   margin: 0 0 1.2rem 0;
-  color: white;
+  color: var(--color-text-primary);
 }
 
 .newsletter-content p {
   text-align: center;
   font-size: 0.9rem;
   margin: 0 0 1.7rem 0;
-  color: white;
+  color: var(--color-text-primary);
 }
 
 .newsletter-form {
@@ -462,8 +477,8 @@ button {
 }
 
 .btn-secondary {
-  background-color: rgb(207, 158, 14);
-  color: white;
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
   margin: 0;
   padding: 0.5rem 1rem;
   border-radius: 0 0.5rem 0.5rem 0;
@@ -474,8 +489,8 @@ button {
 
 /* Footer styles */
 .footer {
-  background-color: rgb(2, 24, 41);
-  color: white;
+  background-color: var(--color-footer-background);
+  color: var(--color-text-primary);
   padding: 3rem 0;
 }
 
@@ -490,13 +505,14 @@ button {
 }
 
 .footer-column h3 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-lg);
   margin: 0 0 1rem 0;
 }
 
 .footer-column p {
   margin: 0 0 0.5rem 0;
 }
+
 .footer-column li {
   margin: 0 0 0.65rem 0;
 }

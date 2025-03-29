@@ -27,8 +27,6 @@ function updateStats() {
     const card = document.createElement("div");
     card.classList.add("stat-card");
 
-    stat.valor += 1;
-
     card.innerHTML = `
           <h3>${stat.valor}+</h3>
           <p>${stat.description}</p>
